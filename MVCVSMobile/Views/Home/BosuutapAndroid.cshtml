@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MVCVSMobile.Models.Product>
+@foreach (var item in Model)
+{
+    <div class="item">
+        <div class="item-area">
+            <div class="product-image-area">
+                <a href="@Url.Action("Chitiet", "Chitietsanpham", new  {id=@item.ID })" class="product-image"><img src="~/Demo/Hinhanh/Products/@item.Image" alt="@item.Name"> </a>
+            </div>
+            <div class="details-area">
+                <h3 class="product-name"><a href="@Url.Action("Chitiet", "Chitietsanpham", new  {id=@item.ID })">@item.Name</a></h3>
+                <div class="price-box">
+                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @string.Format("{0:0,0}", @item.Price)₫ </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

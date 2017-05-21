@@ -1,0 +1,644 @@
+﻿
+@{
+    ViewBag.Title = "Chitiet";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<style>
+    table_bg {
+        border: 1px solid #ddd;
+        border-color: #ddd !important;
+        border-right: 0;
+        border-top: 0;
+
+        width: 100%;
+    }
+
+    table.table_bg td {
+        border: 1px solid #ddd;
+        border-color: #ddd !important;
+        border-bottom: 0;
+        border-left: 0;
+        padding: 0 5px 0 10px;
+    }
+
+    table.table_bg tr:first-child {
+        background: #f2f2f2;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .inner-content .cms table td {
+        padding: 2px;
+        border: 1px solid #fce2ec;
+        border-bottom: 0;
+        border-left: 0;
+    }
+
+    .inner-content .news_entry table td {
+        border: 1px solid #fce2ec;
+        border-bottom: none;
+        border-left: 0;
+        padding: 0 5px 0 10px;
+    }
+</style>
+<!--Facebook API-->
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1605289023106792";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!--End Facebook-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="home"> <a href="/" title="Trở về trang chủ">Trang chủ</a><span>&mdash;›</span></li>
+                <li class="category13"><strong>@Model.Name</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumbs -->
+<!-- main-container -->
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="col-main">
+            <div class="row">
+                <div class="product-view wow bounceInUp animated" itemscope itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="//accent-theme.bizwebvietnam.net/apple-iphone-6-16gb-1">
+                    <meta itemprop="image" content="//bizweb.dktcdn.net/thumb/grande/100/037/441/products/apple-iphone-6-16gb-xam-hang-nhap-khau-6515-108242-3-zoom-70054e9a-4a0f-44f9-bfcd-978868c5553a.jpg?v=1472721533440">
+                    <meta itemprop="shop-currency" content="VND">
+                    <div class="product-essential">
+                        <form id="product_addtocart_form">
+                            <div class="product-img-box col-lg-5 col-sm-5 col-md-5 col-xs-12 wow bounceInRight animated">
+                                <div class="product-image">
+                                    <div class="large-image">                                       
+                                        <a href="~/Demo/Hinhanh/Products/@Model.Image" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20"><img src="~/Demo/Hinhanh/Products/@Model.Image" alt="@Model.Name"></a>
+                                    </div>
+                                    <div class="flexslider flexslider-thumb">                               
+                                        <ul class="previews-list slides">                              
+                                            <li>
+                                                <a href="~/Demo/Hinhanh/Products/@Model.Image" class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage:'/Demo/Hinhanh/Products/@Model.Image'"><img src="~/Demo/Hinhanh/Products/@Model.Image" alt="Apple iPhone 6 32GB" /></a>
+                                            </li>
+
+
+                                            <li>
+                                                <a href='//bizweb.dktcdn.net/100/037/441/products/topic-iphone-5s.png?v=1472721585427' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '//bizweb.dktcdn.net/100/037/441/products/topic-iphone-5s.png?v=1472721585427' "><img src="//bizweb.dktcdn.net/thumb/small/100/037/441/products/topic-iphone-5s.png?v=1472721585427" alt="Apple iPhone 5S 64GB" /></a>
+                                            </li>
+
+
+                                            <li>
+                                                <a href='//bizweb.dktcdn.net/100/037/441/products/apple-iphone-6-16gb-xam-hang-nhap-khau-6513-108242-2-zoom-b4e3cc46-f2ea-47f2-ba3f-4efec255e4bf.jpg?v=1472721533440' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '//bizweb.dktcdn.net/100/037/441/products/apple-iphone-6-16gb-xam-hang-nhap-khau-6513-108242-2-zoom-b4e3cc46-f2ea-47f2-ba3f-4efec255e4bf.jpg?v=1472721533440' "><img src="//bizweb.dktcdn.net/thumb/small/100/037/441/products/apple-iphone-6-16gb-xam-hang-nhap-khau-6513-108242-2-zoom-b4e3cc46-f2ea-47f2-ba3f-4efec255e4bf.jpg?v=1472721533440" alt="Apple iPhone 6 32GB" /></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- end: more-images -->
+
+                                <div class="clear"></div>
+                            </div>
+                            <div class="product-shop col-lg-4 col-sm-4 col-xs-12">
+                                <div class="product-name">
+                                    <h1 itemprop="name">@Model.Name</h1>
+                                </div>
+                                @if(@Model.Status==true)
+                                {
+                                     <p class="availability in-stock"><span>Còn hàng</span></p>
+                                }
+                                                        
+
+                                <div class="price-block">
+                                    <div class="price-box">
+
+
+                                        <p class="special-price"> <span class="price-label">Giá:</span> <span class="price-a" itemprop="price">@String.Format("{0:0,0}",Model.Price)₫ </span> </p>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="short-description">
+                                    <h2>Tổng quan</h2>
+                                    <p>
+                                        @Model.Description
+                                    </p>
+                                </div>
+
+
+                                <div class="add-to-box">
+                                    <div class="add-to-cart">
+                                     
+                                            <label for='product-select-option-0' style="text-align:center">Thanh toán</label>
+                                                <a href="@Model.TTTT"><img src="http://www.baokim.vn/developers/uploads/baokim_btn/thanhtoan-l.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn"></a>
+
+                                                <div bind-class="{'slidedown-visible' : payment_method_id == 39767}" class="payment-method-description slidedown-hidden">
+                                                    <p>cod</p>
+                                                </div>                                                                                                                
+     
+                                        <label for="qty">Số lượng:</label>
+                                        <div class="pull-left">
+                                            <div class="custom pull-left">
+
+                                                <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus"></i></button>
+                                                <input type="number" class="input-text qty" title="Qty" value="1" maxlength="3" id="qty" name="quantity" onkeyup="valid(this,'numbers')" onblur="valid(this,'numbers')">
+
+                                                <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus"></i></button>
+
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            @if (@Model.Status == true)
+                                            {
+                                                <a title="Mua hàng" class="button btn-cart" href="@Url.Action("Themgiohang", "Giohang", new {@iMadt =@Model.ID,@strURL=Request.Url.ToString()})"><span><i class="icon-basket"></i> Mua hàng</span></a>
+
+                                            }
+                                            else
+                                            {
+                                                <a title="Mua hàng" class="button btn-cart"><span>Không kinh doanh</span></a>
+                                            }
+
+                                            @*<a class="button btn-cart" title="Add to Cart" href="@Url.Action("Themgiohang", "Giohang", new {@iMadt =@Model.ID,@strURL=Request.Url.ToString()})"><span><i class="icon-basket"></i> Mua hàng</span></a>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <aside class="col-lg-3 col-sm-3 col-xs-12">
+                                <div class="brand-img">
+                                    <a target="_blank" href="#">
+
+                                        <a href="#" title="Text Banner"><img id="rhs-img" src="http://thayphet.net/application/upload/banner/250x2501.gif" alt="Vsmobile.tk"></a>
+                                        <a href="#" title="Text Banner"><img id="rhs-img" src=" http://thayphet.net/application/upload/banner/web-sieu-toc1.jpg" alt="VSMobile.tk"></a>
+                                    </a>
+                                </div>
+                            </aside>
+                        </form>
+                    </div>
+                    <div class="product-collateral">
+                        <div class="col-sm-12 wow bounceInUp animated">
+                            <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                                <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Mô tả sản phẩm </a> </li>
+
+                                <li> <a href="#product_tabs_custom" data-toggle="tab">Hướng dẫn mua hàng</a> </li>
+
+
+                                <li> <a href="#product_tabs_custom1" data-toggle="tab">Chính sách giao hàng</a> </li>
+
+                            </ul>
+                            <div id="productTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="product_tabs_description">
+                                    <div class="std">
+                                        <p style="text-align: justify;">iPhone 6 32GB&nbsp;không chỉ đơn giản là lớn hơn mà còn tốt hơn về nhiều mặt. Màn hình lớn những độ mỏng đáng nể chỉ 7.1mm. Mạnh mẽ hơn nhưng vẫn tiết kiệm điện năng hiệu quả. Với thiết kế liền mạch giữa chất liệu thủy tinh và kim loại, từng chi tiết được thiết kế kỹ lưỡng để nâng cao trải nghiệm sử dụng Smartphone của người dùng. Vì vậy, trong một màn hình lớn hơn nhưng người dùng vẫn cảm thấy vừa vặn khi cầm trong tay.</p>
+
+                                        <p style="text-align: center;"><img src="//bizweb.dktcdn.net/100/037/441/files/iphone-6-10.jpg?v=1449032280645" /></p>
+
+                                        <p style="text-align: justify;">
+                                            <br />
+                                            iPhone 6 32GB&nbsp;sở hữu màn hình kích thước lớn hơn bất kỳ chiếc iPhone nào trước đây của hãng. Với độ rộng màn hình lên đến 5.5” công nghệ LED-backlit IPS LCD cho góc nhìn rộng và độ phân giải Retina Full HD 1080x1920px với độ tương phản cao, cho khả năng hiển thị nhiều màu sắc hơn và thao tác đa chạm cực kỳ chính xác. Ngoải ra, lớp kính phân cực Polarizer được sử dụng giúp chống chói tốt hơn.
+                                        </p>
+
+                                        <p style="text-align: center;"><img src="//bizweb.dktcdn.net/100/037/441/files/apple-iphone-6s-6-plus-16.jpg?v=1449032305048" /></p>
+
+                                        <p style="text-align: justify;">
+                                            <br />
+                                            iPhone 6 32<strong>GB </strong>được xây dựng trên kiến trúc máy tính để bàn 64-bit và Chip A8 thế hệ 2 cải thiện lên đến 20% hiệu năng CPU và 50% đồ họa GPU cực kỳ mạnh mẽ. Sức mạnh của máy còn được tăng cường bởi một một xử lý phụ M8 giúp xử lý cực kỳ hiệu quả các tín hiệu từ những cảm biến. Nhờ đó, bạn có thể làm được nhiều việc hơn, cho thời gian sử dụng dài hơn với hiệu suất tốt hơn và tính ổn định cao.
+                                        </p>
+                                        <div class="fb-like" data-href="https://vsmobile.tk" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                                        </div>
+                                        <!--Comments Facebook-->
+
+                                        <div class="clearfix"> </div>
+                                        <div class="fb-comments" data-href="/Chitietsanpham/Chitiet/@Model.ID" data-numposts="5"></div>
+                                         
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="tab-pane fade" id="product_tabs_custom">
+                                    <div class="product-tabs-content-inner clearfix">                                     
+                                        <p><span style="color: #f10d84;"><strong><br /></strong></span></p>
+                                        <p><span>- Thời hạn đổi các mặt hàng đã mua tại VSMobile là 15 ngày kể từ ngày xuất hàng. Hàng được đổi phải đảm bảo còn mới 100% chưa được sử dụng và còn nguyên nhãn mác. VSMobile không đổi hàng đã sử dụng.</span></p>
+                                        <p><span>- Tổng giá trị các mặt hàng muốn đổi phải có giá trị tương đương với mặt hàng trả lại. VSMobile không hoàn lại tiền thừa trong trường hợp sản phẩm mới có giá trị thấp hơn sản phẩm đã mua.</span></p>
+                                        <p><span>- Nếu sản phẩm có lỗi, quý khách cần thông báo cho VSMobile được biết qua số hotline, chat với nhân viên bán hàng trong vòng 15 ngày kể từ ngày xuất bán. VSMobile cam kết sẽ nhanh chóng thay thế sản phẩm ngay tức thì cho khách hàng. Nếu như sản phẩm đó không còn hàng VSMobile sẽ hoàn lại tiền mà không có đòi hỏi nào trong trường hợp này.</span></p>
+                                        <p><span>- Phí chuyển phát sẽ được hoàn trả trong trường hợp hàng hóa bán ra không đúng, lỗi hoặc hỏng hóc. </span></p>
+                                        <p> </p>
+                                        <p><span style="color: #ee1091;"><strong>1. Tôi mua hàng rồi, không vừa ý có thể đổi lại hay không?</strong></span></p>
+                                        <p>- Thời hạn đổi các mặt hàng bán tại VSMobile là 15 ngày kể từ ngày xuất hàng. Hàng được đổi phải đảm bảo còn mới 100% chưa được sử dụng và còn nguyên nhãn mác. VSMobile không cho phép các trường hợp đổi hàng đã sử dụng.</p>
+                                        <p> </p>
+                                        <p><span style="color: #ee1091;"><strong>2. Tôi đã đặt hàng, giờ muốn hủy đơn hàng phải làm sao?</strong></span></p>
+                                        <p>- Quý khách vui lòng thông báo đến VSMobile qua số 113, chúng tôi sẽ hủy đơn hàng cho quý khách.</p>
+                                        <p>- Hoặc quý khách đăng nhập vào website VSMobile để tự hủy đơn hàng nếu đặt hàng từ website.</p>
+                                        <p> </p>
+                                        <p><strong><span style="color: #ee1091;">3. Tôi có được trả hàng nếu tôi không hài lòng với sản phẩm tôi nhận được?</span></strong></p>
+                                        <p>Nếu sản phẩm có lỗi kỹ thuật, quý khách cần thông báo cho VSMobile được biết qua số hotline, email hoặc chat với nhân viên bán hàng trong vòng 15 ngày kể từ ngày xuất bán. VSMobile cam kết hoàn lại tiền mà không có đòi hỏi nào trong trường hợp này.</p>
+                                        <p>Hàng hóa phải được trả lại y nguyên như ban đầu khi chúng được nhận. Xin vui lòng liên hệ với phòng dịch vụ khách hàng của chúng tôi trước khi trả lại hàng vì chúng tôi cần phải thu xếp để hoàn lại tiền và thông báo phương thức hoàn trả sản phẩm.</p>
+                                        <p>Phí chuyển phát sẽ được hoàn trả trong trường hợp hàng hóa bán ra không đúng, lỗi kỹ thuật hoặc hỏng hóc do quá trình vận chuyển.</p>
+                                        <p>Trân trọng cảm ơn quý khách!</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="product_tabs_custom1">
+                                    <div class="product-tabs-content-inner clearfix">
+                                        <p><strong style="color: #db2386;">1. Phạm vi giao hàng</strong></p>
+                                        <div style="border: 1px #f2f2f2 solid; padding: 10px; width: 300px; border-radius: 25px; margin-left: 10%; margin-right: 10%; margin-top: 20px;">
+                                            <p style="text-align:center"><strong>GIAO HÀNG TẬN NƠI TOÀN QUỐC </strong><br /><strong>VỚI ĐƠN HÀNG TỪ 150.000 VNĐ </strong></p>
+                                            <ul>
+                                                <li style="margin-top: 7px; list-style: initial; font-size: 12px; margin-left: 16px;"><strong>Miễn phí đơn hàng nội thành</strong> với giá trị thanh toán đơn hàng từ 199.000 VNĐ</li>
+                                                <li style="margin-top: 3px; list-style: initial; font-size: 12px; margin-left: 16px;"><strong>Miễn phí đơn hàng ngoại thành</strong> với giá trị thanh toán đơn hàng từ 399.000 VNĐ</li>
+                                            </ul>
+                                        </div>
+                                        <p style="padding-left:10%"> </p>
+                                        <table class="table_bg" border="0" cellspacing="0" cellpadding="0" width="490">
+                                            <colgroup><col width="100"></col> <col width="110"></col> <col width="280"></col> </colgroup>
+                                            <tbody>
+                                                <tr height="39">
+                                                    <td class="oa1" colspan="3" width="490" height="39">
+                                                        <p>ĐƠN   HÀNG NỘI THÀNH</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="144">
+                                                    <td class="oa4" rowspan="7" width="100" height="424">
+                                                        <p>KV   Đông   Nam Bộ</p>
+                                                    </td>
+                                                    <td class="oa5" width="110">
+                                                        <p>TP.   Hồ Chí Minh</p>
+                                                    </td>
+                                                    <td class="oa6" width="280">
+                                                        <p>Quận   1, 3, 4, 5, 6, 7, 8, 10, 11, Tân Bình, Tân   Phú, Phú Nhuận, Bình Thạnh, Gò Vấp, Bình Tân</p>
+                                                        <p> </p>
+                                                        <p>Quận 2,   Quận 9,   Thủ   Đức, Bình Chánh, Nhà Bè, Quận 12, Hóc Môn, Củ Chi, Cần Giờ  (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="48">
+                                                    <td class="oa7" width="110" height="48">
+                                                        <p>Đồng   Nai</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.    Biên Hòa (*)</p>
+                                                        <p>TT.   Long Thành (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Bà Rịa – Vũng Tàu</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Vũng Tàu  (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="67">
+                                                    <td class="oa7" width="110" height="67">
+                                                        <p>Bình Dương</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TX.   Thủ Dầu Một (*)</p>
+                                                        <p>TX. Thuận An (*)</p>
+                                                        <p>TX. Dĩ An (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Bình Phước</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TX.   Đồng Xoài (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="48">
+                                                    <td class="oa7" width="110" height="48">
+                                                        <p>Tây Ninh</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Tây Ninh (*)</p>
+                                                        <p>TT. Hòa Thành (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Bình Thuận</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Phan Thiết (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa8" rowspan="7" width="100" height="282">
+                                                        <p>KV   Tây   Nam Bộ</p>
+                                                    </td>
+                                                    <td class="oa7" width="110">
+                                                        <p>Long   An</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TT.   Bến Lức (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Tiền Giang</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Mỹ Tho (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="48">
+                                                    <td class="oa7" width="110" height="48">
+                                                        <p>An   Giang</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP. Long Xuyên (*)</p>
+                                                        <p>TP. Châu Đốc (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>TP.   Cần Thơ</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>Q.   Ninh Kiều (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Kiên Giang</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Rạch Giá (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Trà Vinh</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Trà Vinh (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Vĩnh Long</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP. Vĩnh Long (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa8" rowspan="2" width="100" height="78">
+                                                        <p>KV   Tây   Nguyên</p>
+                                                    </td>
+                                                    <td class="oa7" width="110">
+                                                        <p>Đắc Lắc</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Buôn Ma Thuột (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa7" width="110" height="39">
+                                                        <p>Lâm Đồng</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Đà Lạt (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="48">
+                                                    <td class="oa8" rowspan="2" width="100" height="96">
+                                                        <p>KV   Miền   Trung</p>
+                                                    </td>
+                                                    <td class="oa7" width="110">
+                                                        <p>Khánh Hòa</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>TP.   Nha Trang (*)</p>
+                                                        <p>TP.   Cam Ranh (*)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="48">
+                                                    <td class="oa7" width="110" height="48">
+                                                        <p>TP.   Đà Nẵng</p>
+                                                    </td>
+                                                    <td class="oa7" width="280">
+                                                        <p>Q.   Hải Châu (*)</p>
+                                                        <p>Q. Thanh Khê (*)</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> </p>
+                                        <p>(*) Các khu vực có bán kính dưới 5 km so với địa chỉ cửa hàng VSMobile.tk và hàng hóa trong đơn hàng có ở cửa hàng <a href="https://VSMobile.tk">VSMobile.tk</a> tại khu vực đó.</p>
+                                        <p>Xem địa chỉ các cửa hàng VSMobile.tk tại: <a href="/Pages/Hethongcuahang">http://VSMobile.tk/Pages/Hethongcuahang.html</a></p>
+                                        <p> </p>
+                                        <p><span style="color: #db2386;"><strong>2. Biểu phí giao hàng:</strong></span></p>
+                                        <p><span style="color: #db2386;"><strong><br /></strong></span></p>
+                                        <table class="table_bg" border="0" cellspacing="0" cellpadding="0" width="712">
+                                            <colgroup><col width="200"></col> <col width="280"></col> <col width="232"></col> </colgroup>
+                                            <tbody>
+                                                <tr height="39">
+                                                    <td class="oa1" width="200" height="39">
+                                                        <p>KHU   VỰC</p>
+                                                    </td>
+                                                    <td class="oa1" width="280">
+                                                        <p>GIÁ   TRỊ ĐƠN HÀNG</p>
+                                                    </td>
+                                                    <td class="oa1" width="232">
+                                                        <p>CƯỚC PHÍ VẬN CHUYỂN</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa2" rowspan="2" width="200" height="78">
+                                                        <p>Nội   thành</p>
+                                                        <p>(Đơn hàng như quy định tại mục 1)</p>
+                                                    </td>
+                                                    <td class="oa3" width="280">
+                                                        <p>Từ 199.000 VNĐ</p>
+                                                    </td>
+                                                    <td class="oa3" width="232">
+                                                        <p>Miễn phí</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa5" width="280" height="39">
+                                                        <p>Từ 150.000 – Dưới 199.000 VNĐ</p>
+                                                    </td>
+                                                    <td class="oa5" width="232">
+                                                        <p>20.000   VNĐ</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa6" rowspan="2" width="200" height="106">
+                                                        <p>Ngoại   thành</p>
+                                                        <p>(Đơn hàng không nằm trong quy định tại   mục 1)</p>
+                                                    </td>
+                                                    <td class="oa5" width="280">
+                                                        <p>Từ 399.000 VNĐ</p>
+                                                    </td>
+                                                    <td class="oa5" width="232">
+                                                        <p>Miễn phí</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="67">
+                                                    <td class="oa5" width="280" height="67">
+                                                        <p>Từ 150.000 – Dưới 399.000 VNĐ</p>
+                                                    </td>
+                                                    <td class="oa7" width="232">
+                                                        <p>Khách hàng chịu toàn bộ chi phí của   đơn vị vận chuyển hàng hóa</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="39">
+                                                    <td class="oa5" colspan="3" width="712" height="39">
+                                                        <p>Ghi   chú:   VSMobile.tk   không vận chuyển hóa đơn dưới 150.000 các khu vực ngoại thành</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> </p>
+                                        <p> </p>
+                                        <p><span style="color: #db2386;"><strong>3. Quy trình giao nhận hàng</strong></span></p>
+                                        <p> </p>
+                                        <p><img style="display: block; margin-left: 5%;" src="https://concung.com/img/themes1.0/main/thanhtoan.jpg" alt="" width="650" height="146" /></p>
+                                        <p><strong>ĐƠN HÀNG NỘI THÀNH:</strong></p>
+                                        <p> </p>
+                                        <p>Khi nhận hàng, quý khách hàng cần lưu ý thực hiện:</p>
+                                        <p>- Mở gói hàng và đối chiếu hàng hóa với Phiếu giao hàng.</p>
+                                        <p>- Kiểm tra sản phẩm thực tế có đúng với sản phẩm mà Khách hàng đã đặt mua hay không.</p>
+                                        <p>- Kiểm tra bao bì và sản phẩm có bị hư hại do quá trình vận chuyển hay không.</p>
+                                        <p>Nếu không hài lòng với 1 trong 3 điều trên, Khách hàng có thể yêu cầu Nhân viên giao hàng xác nhận và trả lại hàng.</p>
+                                        <p>VSMobile.tk sẽ không chịu trách nhiệm giải quyết khiếu nại về việc thiếu hàng hoặc giao sai hàng của Khách hàng sau khi Khách hàng đã ký nhận và thanh toán.</p>
+                                        <p>Trong 15 ngày, quý khách được đổi hoặc trả hàng trong các trường hợp được quy định tại <strong><a href="/Pages/Gioithieu">VSMobile</a></strong></p>
+                                        <p>Khách hàng nếu chọn hình thức "Thanh toán trực tiếp khi nhận hàng" thì thanh toán trực tiếp cho nhân viên giao hàng ngay sau khi nhận hàng.</p>
+                                        <p> </p>
+                                        <p><strong>ĐƠN HÀNG NGOẠI THÀNH:</strong></p>
+                                        <p> </p>
+                                        <p>- VSMobile.tk gửi hàng thông qua đơn vị vận chuyển và đảm bảo hàng hóa nguyên đai, nguyên kiện và mới 100%</p>
+                                        <p>- Nếu không hài lòng với kiện hàng đã giao, Khách hàng có thể trả lại hàng cho nhân viên nguyên đai, nguyên kiện như tình trạng ban đầu</p>
+                                        <p>- Trong 15 ngày, nếu không hài lòng với sản phẩm, quý khách có thể gọi đến tổng đài CSKH: <strong><a title="Mua hàng" href="/Pages/Lienhe">01666420162</a></strong><span> </span> để được giải đáp thắc mắc.</p>
+                                        <p> </p>
+                                        <p><span style="color: #db2386;"><strong>4.Thời gian giao nhận hàng</strong></span></p>
+                                        <p> </p>
+                                        <table class="table_bg" border="0" cellspacing="0" cellpadding="0" width="705">
+                                            <colgroup><col width="206"></col> <col width="231"></col> <col width="268"></col> </colgroup>
+                                            <tbody>
+                                                <tr height="41">
+                                                    <td class="oa1" width="206" height="41">
+                                                        <p>KHU   VỰC</p>
+                                                    </td>
+                                                    <td class="oa1" width="231">
+                                                        <p>THỜI GIAN ĐẶT HÀNG</p>
+                                                    </td>
+                                                    <td class="oa1" width="268">
+                                                        <p>THỜI GIAN GIAO HÀNG</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="72">
+                                                    <td class="oa2" rowspan="2" width="206" height="123">
+                                                        <p>Nội   thành</p>
+                                                        <p>(Đơn hàng như quy định tại mục 1)</p>
+                                                    </td>
+                                                    <td class="oa3" width="231">
+                                                        <p>Đơn hàng được xác nhận sau   15:00 ngày hôm trước đến trước 8:00 ngày hôm sau</p>
+                                                    </td>
+                                                    <td class="oa2" width="268">
+                                                        <p>Giao   hàng trước 12:00 cùng ngày</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="51">
+                                                    <td class="oa5" width="231" height="51">
+                                                        <p>Đơn hàng được xác nhận từ 8:00 đến   15:00</p>
+                                                    </td>
+                                                    <td class="oa5" width="268">
+                                                        <p>Giao   hàng trước 20:00 cùng ngày</p>
+                                                    </td>
+                                                </tr>
+                                                <tr height="92">
+                                                    <td class="oa5" width="206" height="92">
+                                                        <p>Ngoại   thành</p>
+                                                        <p>(Đơn hàng không nằm trong quy định tại   mục 1)</p>
+                                                    </td>
+                                                    <td class="oa5" width="231">
+                                                        <p> </p>
+                                                    </td>
+                                                    <td class="oa6" width="268">
+                                                        <p>Giao hàng từ 3 đến 7 ngày tùy   thuộc vào khu vực nhận hàng.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> </p>
+                                        <p><strong style="color: #db2386;">Lưu ý:</strong></p>
+                                        <p>Đơn hàng sẽ tự động hủy nếu:</p>
+                                        <p>- Nhân viên của VSMobile.tk không liên lạc được với Khách hàng tại thời điểm giao hàng (tối đa 3 cuộc gọi và mỗi lần cách nhau 10 phút).</p>
+                                        <p>- Nhân viên tổng đài của VSMobile.tk không liên lạc được với Khách hàng để xác nhận đơn hàng.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="box-additional">
+
+                                <div class="related-pro wow bounceInUp animated">
+                                    <div class="slider-items-products">
+                                        <div class="new_title center">
+                                            <h2>Sản phẩm liên quan</h2>
+                                        </div>
+                                        <div id="related-products-slider" class="product-flexslider hidden-buttons">
+
+                                            @Html.Action("Spmoi", "Home")
+                                        
+                                         </div>
+                                     
+                                       </div>
+                                   
+                                    </div>
+                                </div>                           
+
+                            </div>
+              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<!--End main-container -->
+<!-- Footer Starts -->
+<script type="text/javascript">
+    // <![CDATA[
+    var selectCallback = function(variant, selector) {       
+        /*begin variant image*/
+        if (variant && variant.image) {
+            var originalImage = jQuery(".large-image img");
+            var newImage = variant.image;
+            var element = originalImage[0];
+            Bizweb.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+                jQuery(element).parents('a').attr('href', newImageSizedSrc);
+                jQuery(element).attr('src', newImageSizedSrc);
+            });
+        }
+        /*end of variant image*/
+    };
+
+    // initialize multi selector for product
+   
+    // ]]>
+</script>
+<script>
+    function valid(o,w){
+        o.value = o.value.replace(valid.r[w],'');
+        var qtyCount = document.getElementById('qty').value;
+        if(qtyCount == 0){
+            document.getElementById("qty").value = 1;
+        }
+    }
+    valid.r={
+        'numbers':/[^\d]/g
+    }
+</script>
+
+

@@ -1,0 +1,107 @@
+﻿
+@using MVCVSMobile.Models;
+@{
+    ViewBag.Title = "KQTimkiem";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kết Quả Tìm kiếm</h2>
+
+<div>@ViewBag.ThongBao</div>
+
+<!-- End breadcrumbs -->
+<!-- Two columns content -->
+<section class="main-container col2-left-layout">
+
+    <div class="main container">
+
+        <div class="row">
+            <div class="col-main col-sm-9 col-sm-push-3 wow bounceInUp animated">
+                <div class="category-title">
+                    <h1></h1>
+                </div>
+
+                <div class="category-products">
+                    <div class="toolbar">
+                        <div id="sort-by">
+                            <label class="left">Sắp xếp: </label>
+                            <ul>
+                                <li>
+                                    <a href="#">Chọn<span class="right-arrow"></span></a>
+                                    <ul>
+                                        <li><a href="?sortby=manual">Mặc định</a></li>
+                                        <li><a href="?sortby=alpha-asc">A &rarr; Z</a></li>
+                                        <li><a href="?sortby=alpha-desc">Z &rarr; A</a></li>
+                                        <li><a href="?sortby=price-asc">Giá tăng dần</a></li>
+                                        <li><a href="?sortby=price-desc">Giá giảm dần</a></li>
+                                        <li><a href="?sortby=created-desc">Hàng mới nhất</a></li>
+                                        <li><a href="?sortby=created-asc">Hàng cũ nhất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pager">
+                            <div class="pages">
+                                <label>Trang:</label>
+                                <ul class="pagination">
+                                    <li class="active"><a href="">1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="products-grid">
+                        @foreach (var item in Model)
+                        {
+                            <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-12">
+                                <div class="col-item">
+                                    <div class="product-image-area">
+                                        <a class="product-image" title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new  {id=@item.ID })"><img src="~/Demo/Hinhanh/Products/@item.Image" class="img-responsive" alt="a" /> </a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="info-inner">
+                                            <div class="item-title"> <a title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new { id = @item.ID })"><h3>@item.Name</h3></a></div>
+                                            <!--item-title-->
+                                            <div class="item-content">
+                                                <div class="price-box">
+                                                    <p class="special-price"> <span class="price"> @String.Format("{0:0,0}", @item.Price)</span> </p>
+                                                </div>
+                                            </div>
+                                            <!--item-content-->
+                                        </div>
+                                        <!--info-inner-->
+                                        <div class="actions">
+
+                                            @*<button type="button" title="Mua hàng" class="button btn-cart" onclick="Bizweb.addItem(1271121, 1, cartItem)"><span>Mua hàng</span></button>*@
+                                            <button type="button" title="Mua hàng" class="button btn-cart" onclick="Bizweb.addItem(1271121, 1, cartItem)"><span>Mua hàng</span></button>
+                                        </div>
+                                        <!--actions-->
+
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+
+            </div>
+            <!--Menuleft-->
+            <aside class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9 wow bounceInUp animated">
+                <div class="side-nav-categories">
+                    <div class="block-title"><h2>Danh mục sản phẩm</h2></div>
+                    <div class="box-content box-category">
+                        @Html.Action("Menuleft", "Dssanpham")
+                    </div>
+                </div>
+                <div class="block block-banner">
+                    <a href="#"><img src="https://bizweb.dktcdn.net/100/037/441/themes/187698/assets/block-banner.png?1477883023849" alt="Công nghệ số Accent"></a>
+                    <div id="bw-statistics"></div>
+                </div>
+            </aside>
+            <!--End Menuleft-->
+        </div>
+
+    </div>
+</section>
+

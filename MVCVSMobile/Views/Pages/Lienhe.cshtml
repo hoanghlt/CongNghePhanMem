@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Lienhe";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div id="fb-root"></div>
+<script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=560168754166722";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<<!-- main-container -->
+<div class="main-container col2-right-layout">
+    <div class="main container">
+        <div class="row">
+            <section class="col-main col-sm-9 wow bounceInUp animated">
+                <div class="page-title">
+                    <h2>Liên hệ</h2>
+                </div>
+                <div class="static-contain">
+                    <form accept-charset='UTF-8' action='/contact' id='contact' method='post'>
+                        <input name='FormType' type='hidden' value='contact' />
+                        <input name='utf8' type='hidden' value='true' />
+
+
+                        <fieldset class="group-select">
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <div class="customer-name">
+                                                <div class="input-box">
+                                                    <label> Họ và tên: <span class="required">*</span></label>
+                                                    <br>
+                                                    <input type="text" value="" name="contact[Name]" title="First Name" class="input-text ">
+                                                </div>
+                                                <div class="input-box">
+                                                    <label> Email: <span class="required">*</span> </label>
+                                                    <br>
+                                                    <input type="text" value="" class="input-text" name="contact[email]">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <label for="comment">Nội dung: <em class="required">*</em></label>
+                                            <br>
+                                            <div class="">
+                                                <textarea name="contact[Body]" title="Comment" class="required-entry input-text" cols="5" rows="3"></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="buttons-set">
+                                        <button type="submit" title="Submit" class="button submit"> <span> Gửi </span> </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+            <aside class="col-right sidebar col-sm-3 wow bounceInUp animated">
+
+                <div class="side-nav-categories">
+                    <div class="block-title"><h2>Danh mục sản phẩm</h2></div>
+                    <div class="box-content box-category">
+                        @Html.Action("Menuleft", "Dssanpham")
+                    </div>
+                </div>
+              
+
+            </aside>
+        </div>
+        <div class="fb-page" data-href="https://www.facebook.com/vsmobiletk-204178183341008/" data-width="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/vsmobiletk-204178183341008/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/vsmobiletk-204178183341008/">vsmobile.tk</a></blockquote></div>
+    </div>
+</div>
+<!--End main-container -->
+

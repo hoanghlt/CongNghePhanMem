@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MVCVSMobile.Models.ProductCategory>
+
+<ul id="magicat">
+    @foreach (var item in Model)
+    {
+        <li class="level0- level0 open">
+            <span class="magicat-cat">
+                <a href="#"><span>@item.Name</span></a>
+            </span>
+            <ul>
+                @Html.Action("ChildrenMenu", "Dssanpham", new { ParentID = @item.DisplayOrder })
+            </ul>
+        </li>
+    }
+</ul>

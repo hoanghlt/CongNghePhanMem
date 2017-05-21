@@ -1,0 +1,177 @@
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.dll.config
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.pdb
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Antlr3.Runtime.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\EntityFramework.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\EntityFramework.SqlServer.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Google.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Web.Infrastructure.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Newtonsoft.Json.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Owin.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Helpers.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Mvc.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Optimization.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Razor.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Deployment.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Razor.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\WebGrease.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Helpers.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Mvc.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Optimization.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.Razor.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Deployment.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Razor.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Newtonsoft.Json.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Antlr3.Runtime.pdb
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\EntityFramework.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\EntityFramework.SqlServer.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Google.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.pdb
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\PagedList.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\PagedList.Mvc.dll
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\PagedList.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\bin\PagedList.Mvc.xml
+D:\CNTT-DH Cong Nghe\ASP.NET\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.csprojResolveAssemblyReference.cache
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.dll.config
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\MVCVSMobile.pdb
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Antlr3.Runtime.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\EntityFramework.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\EntityFramework.SqlServer.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Google.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Web.Infrastructure.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Newtonsoft.Json.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Owin.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\PagedList.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\PagedList.Mvc.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Helpers.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Mvc.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Optimization.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Razor.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Deployment.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Razor.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\WebGrease.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Newtonsoft.Json.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\PagedList.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\PagedList.Mvc.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Helpers.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Mvc.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Optimization.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.Razor.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Deployment.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\System.Web.WebPages.Razor.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Antlr3.Runtime.pdb
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\EntityFramework.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\EntityFramework.SqlServer.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Google.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.csprojResolveAssemblyReference.cache
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.dll
+D:\study\lap trinh web\doanchuyennganh\MVCVSMobile\MVCVSMobile\obj\Debug\MVCVSMobile.pdb
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\MVCVSMobile.dll.config
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\MVCVSMobile.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\MVCVSMobile.pdb
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Antlr3.Runtime.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\EntityFramework.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\EntityFramework.SqlServer.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Google.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Web.Infrastructure.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Newtonsoft.Json.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Owin.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\PagedList.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\PagedList.Mvc.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Helpers.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Mvc.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Optimization.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Razor.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.Deployment.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.Razor.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\WebGrease.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Newtonsoft.Json.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\PagedList.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\PagedList.Mvc.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Helpers.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Mvc.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Optimization.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.Razor.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.Deployment.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\System.Web.WebPages.Razor.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Antlr3.Runtime.pdb
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\EntityFramework.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\EntityFramework.SqlServer.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.Core.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Facebook.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Cookies.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.OAuth.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Google.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.Twitter.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\obj\Debug\MVCVSMobile.csprojResolveAssemblyReference.cache
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\obj\Debug\MVCVSMobile.dll
+E:\HOANCHINHDAIHOC\CNPM-16HC\MVCVSMobile2\MVCVSMobile\obj\Debug\MVCVSMobile.pdb

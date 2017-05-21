@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17, 22.125" name="VSMobile">
+  <DataContextMoniker Name="/VSMobileDataContext" />
+  <nestedChildShapes>
+    <classShape Id="64de1e64-e9c8-48a3-bbf4-75cbf9042b80" absoluteBounds="11.75, 8.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/VSMobileDataContext/About" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16467d4a-25d6-4618-8dbd-75a7f572991d" absoluteBounds="11.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ea5f5cf-79fc-49fc-82ae-3e4e97986c5f" absoluteBounds="11.5, 4.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/VSMobileDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a0b5c14-8523-45c4-b19e-618050321fa6" absoluteBounds="11.515, 4.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52c65184-b30b-43df-bba9-82be3047ab1f" absoluteBounds="3.5, 11.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/VSMobileDataContext/Color" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d71fdcdb-2e9a-4656-bb53-b2a056dcc60a" absoluteBounds="3.515, 11.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="267d5383-67fc-41b1-9689-998827df9f4b" absoluteBounds="8.75, 12.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/VSMobileDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e36fd18-d982-4f61-a4a5-3c8c7ebd1a96" absoluteBounds="8.765, 13.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f4541d6-35dd-4cf9-a93a-ff258cd3dc5a" absoluteBounds="11.5, 2.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/VSMobileDataContext/Credential" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22b7dae5-33e3-4ef6-b005-c6d620dfdb32" absoluteBounds="11.515, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a002ba8-c25e-4465-a88d-ac0c8d050602" absoluteBounds="11.75, 12.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/VSMobileDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d5c53ee-65ec-4940-a8a5-1a45f347e8fe" absoluteBounds="11.765, 13.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30f07e1c-fea3-47e8-9578-e1eb33db9404" absoluteBounds="14.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/VSMobileDataContext/Feedback" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e10fad9-35ae-4a73-95de-9fc4cc381a97" absoluteBounds="14.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d113627c-d34a-47fa-9c2c-757f12715610" absoluteBounds="14.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/VSMobileDataContext/Footer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8db4f935-30f9-409d-95c7-4b9fd9e9573f" absoluteBounds="14.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddff53be-ae18-467a-ba5f-1402b1f68254" absoluteBounds="14.75, 5.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/VSMobileDataContext/New" />
+      <nestedChildShapes>
+        <elementListCompartment Id="929e4ac2-0951-47aa-94e2-46a5604f2761" absoluteBounds="14.765, 6.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="605a3372-e2e5-46d2-ad30-d986dcb54843" absoluteBounds="6.25, 6.25, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/VSMobileDataContext/OrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afe9d180-8662-4b5b-879d-aa3e901f8631" absoluteBounds="6.265, 6.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5134c56e-01b0-4e5a-a21b-8ce9fe28d53e" absoluteBounds="3.5, 15, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/VSMobileDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6941af92-3e14-4ff3-a1dc-758933c1755e" absoluteBounds="3.515, 15.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6447700d-eb2e-44c9-9cf6-a58fa221b2c5" absoluteBounds="0.75, 18.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/VSMobileDataContext/PostCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba750817-31cb-4dc7-a04d-793bd4fc7497" absoluteBounds="0.765, 19.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b2d813e-6351-4e30-bb0f-c9eb90467a0b" absoluteBounds="3.5, 18.375, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/VSMobileDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a870343-abf1-4694-84e9-518d5a7ea70a" absoluteBounds="3.515, 18.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85655065-ff3c-4edc-a3af-d79f80b42597" absoluteBounds="6.25, 11.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/VSMobileDataContext/PostTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d1c14c8-b4d9-456e-91c5-1586aa72d33b" absoluteBounds="6.265, 11.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cff695b0-e134-4e56-9834-7acc26571681" absoluteBounds="0.75, 2.625, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/VSMobileDataContext/ProductCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c262a097-1bd5-4ee2-8ca5-319a517b4cad" absoluteBounds="0.765, 3.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d83c426c-05e7-4a59-8396-e88442c08e03" absoluteBounds="6.25, 3.5, 2, 1.193992513020834">
+      <DataClassMoniker Name="/VSMobileDataContext/ProductColor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ed09c43-09c2-47b5-a170-5516526c1f26" absoluteBounds="6.265, 3.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f72761b-bd24-49b7-a272-4e3cba35b336" absoluteBounds="3.5, 1.125, 2, 6.0015283203124987">
+      <DataClassMoniker Name="/VSMobileDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eabf0091-1e9a-41bd-bc20-188b392b6189" absoluteBounds="3.515, 1.585, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59b3d42c-85b5-43e5-8158-10db3440a939" absoluteBounds="6.25, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/VSMobileDataContext/ProductTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e706834-2dde-425a-a809-d5868f555a8a" absoluteBounds="6.265, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="346c5f46-153e-4705-a804-ce670b8f02ee" absoluteBounds="8.75, 9.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/VSMobileDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25e8592b-4b8a-431c-b4ad-14beedb7769e" absoluteBounds="8.765, 9.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6b6b646-6a11-44e5-ac2f-5e3ded1dbcd3" absoluteBounds="14.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/VSMobileDataContext/Slide" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce82c6bb-be96-4825-977b-89686e6dbc37" absoluteBounds="14.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df4eb857-005e-4788-b767-b54358b7e315" absoluteBounds="3.5, 8.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/VSMobileDataContext/Tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="056da35f-a882-4379-91a5-cf88a826d8cf" absoluteBounds="3.515, 8.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="264a3aeb-3102-4cac-b580-2f7422c784ca" absoluteBounds="8.75, 3.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/VSMobileDataContext/UserGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac8220df-a19c-4586-bdab-7f829dafaf5e" absoluteBounds="8.765, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 15); (5.875 : 14.625); (5.875 : 7.13544840494792); (5.94791666666667 : 7.13544840494792 : JumpStart); (6.11458333333333 : 7.13544840494792 : JumpEnd); (6.25 : 7.13544840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Order/Order_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="5134c56e-01b0-4e5a-a21b-8ce9fe28d53e" />
+        <classShapeMoniker Id="605a3372-e2e5-46d2-ad30-d986dcb54843" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 20.1162019856771); (3.5 : 20.1162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/PostCategory/PostCategory_Post" />
+      <nodes>
+        <classShapeMoniker Id="6447700d-eb2e-44c9-9cf6-a58fa221b2c5" />
+        <classShapeMoniker Id="3b2d813e-6351-4e30-bb0f-c9eb90467a0b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 20.1258048502604); (7.25 : 20.1258048502604); (7.25 : 12.6939925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Post/Post_PostTag" />
+      <nodes>
+        <classShapeMoniker Id="3b2d813e-6351-4e30-bb0f-c9eb90467a0b" />
+        <classShapeMoniker Id="85655065-ff3c-4edc-a3af-d79f80b42597" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.5312264964944); (5.81607443490112 : 11.2151520615933 : JumpStart); (5.93392556509888 : 11.0973009313955 : JumpEnd); (6.03125 : 10.9999764964944); (6.03125 : 4.91274251302083); (6.25 : 4.69399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VSMobileDataContext/Color/Color_ProductColor" />
+      <nodes>
+        <classShapeMoniker Id="52c65184-b30b-43df-bba9-82be3047ab1f" />
+        <classShapeMoniker Id="d83c426c-05e7-4a59-8396-e88442c08e03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.68826416015625); (5.85416666666667 : 6.68826416015625 : JumpStart); (6.11458333333333 : 6.68826416015625 : JumpEnd); (6.25 : 6.68826416015625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Product/Product_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="3f72761b-bd24-49b7-a272-4e3cba35b336" />
+        <classShapeMoniker Id="605a3372-e2e5-46d2-ad30-d986dcb54843" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.06574375651042); (5.85416666666667 : 4.06574375651042 : JumpStart); (6.02083333333333 : 4.06574375651042 : JumpEnd); (6.25 : 4.06574375651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Product/Product_ProductColor" />
+      <nodes>
+        <classShapeMoniker Id="3f72761b-bd24-49b7-a272-4e3cba35b336" />
+        <classShapeMoniker Id="d83c426c-05e7-4a59-8396-e88442c08e03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.18350341796875); (3.5 : 4.18350341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/ProductCategory/ProductCategory_Product" />
+      <nodes>
+        <classShapeMoniker Id="cff695b0-e134-4e56-9834-7acc26571681" />
+        <classShapeMoniker Id="3f72761b-bd24-49b7-a272-4e3cba35b336" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.09699625651042); (6.25 : 2.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Product/Product_ProductTag" />
+      <nodes>
+        <classShapeMoniker Id="3f72761b-bd24-49b7-a272-4e3cba35b336" />
+        <classShapeMoniker Id="59b3d42c-85b5-43e5-8158-10db3440a939" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 9.25); (11.125 : 8.875); (11.125 : 2.81814697265625); (11.5 : 2.81814697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Role/Role_Credential" />
+      <nodes>
+        <classShapeMoniker Id="346c5f46-153e-4705-a804-ce670b8f02ee" />
+        <classShapeMoniker Id="2f4541d6-35dd-4cf9-a93a-ff258cd3dc5a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.06814697265625); (5.79166666666667 : 9.06814697265625 : JumpStart); (6.11458333333333 : 9.06814697265625 : JumpEnd); (7.25 : 9.06814697265625); (7.25 : 11.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Tag/Tag_PostTag" />
+      <nodes>
+        <classShapeMoniker Id="df4eb857-005e-4788-b767-b54358b7e315" />
+        <classShapeMoniker Id="85655065-ff3c-4edc-a3af-d79f80b42597" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.4368490375601); (5.81607443490112 : 8.12077460265898 : JumpStart); (5.93392556509888 : 8.00292347246122 : JumpEnd); (5.9375 : 7.9993490375601); (5.9375 : 2.42674638476563); (6.25 : 2.42674638476563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/Tag/Tag_ProductTag" />
+      <nodes>
+        <classShapeMoniker Id="df4eb857-005e-4788-b767-b54358b7e315" />
+        <classShapeMoniker Id="59b3d42c-85b5-43e5-8158-10db3440a939" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 4.5112939453125); (9.75 : 6.03530160677083); (11.0416666666667 : 6.03530160677083 : JumpStart); (11.2083333333333 : 6.03530160677083 : JumpEnd); (11.5 : 6.03530160677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/UserGroup/UserGroup_User" />
+      <nodes>
+        <classShapeMoniker Id="264a3aeb-3102-4cac-b580-2f7422c784ca" />
+        <classShapeMoniker Id="8ea5f5cf-79fc-49fc-82ae-3e4e97986c5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 3.31814697265625); (11.0416666666667 : 3.31814697265625 : JumpStart); (11.2083333333333 : 3.31814697265625 : JumpEnd); (11.5 : 3.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VSMobileDataContext/UserGroup/UserGroup_Credential" />
+      <nodes>
+        <classShapeMoniker Id="264a3aeb-3102-4cac-b580-2f7422c784ca" />
+        <classShapeMoniker Id="2f4541d6-35dd-4cf9-a93a-ff258cd3dc5a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

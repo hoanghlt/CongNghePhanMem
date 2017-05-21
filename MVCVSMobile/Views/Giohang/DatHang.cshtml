@@ -1,0 +1,307 @@
+﻿@using MVCVSMobile.Models;
+@model List<Giohang>
+
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section DHcss{
+    <link href="~/Demo/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Demo/Content/font-robotos.css" rel="stylesheet" />
+    <link href="~/Demo/Content/nprogress.css" rel="stylesheet" type="text/css" />
+    <link href="~/Demo/Content/checkout1.css" rel="stylesheet" />
+    <link href="~/Demo/Content/checkout2.css" rel="stylesheet" />
+
+
+    <script type="text/javascript">
+        function addDOMLoadedEvent(func) {
+            if (document.readyState === 'complete') {
+                func();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("DOMContentLoaded", func, false);
+                }
+                else {
+                    document.attachEvent("onDOMContentLoaded", func);
+                }
+            }
+        }
+    </script>
+    <script>
+        //<![CDATA[
+        (function () {
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+            s.src = '//bizweb.dktcdn.net/assets/themes_support/bizweb_stats.js?v=1';
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+        //]]>
+    </script>
+}
+
+@section DHjs{
+    <script src="~/Demo/Script/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/twine.min.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/validator.min.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/nprogress.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/money-helper.js" type="text/javascript"></script>
+    <script src="~/Demo/Script/checkout.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(document).ajaxStart(function () {
+            NProgress.start();
+        });
+        $(document).ajaxComplete(function () {
+            NProgress.done();
+        });
+
+        context = {}
+
+        $(function () {
+            Twine.reset(context).bind().refresh();
+        });
+
+        $(document).ready(function () {
+
+            $("#customer-address").trigger("change");
+
+            $("select[name='BillingProvinceId']").trigger("change");
+            $("select[name='ShippingProvinceId']").trigger("change");
+            Twine.context(document.body).checkout.caculateShippingFee();
+        });
+    </script>
+    <script type='text/javascript'>
+
+    </script>
+}
+
+<form method="post" action="" data-toggle="validator" class="formCheckout">
+    <div context="checkout" define='{checkout: new Bizweb.Checkout(this,{ existCode: false, totalOrderItemPrice: 19600000.0000, discount: 0, shippingFee: 0, freeShipping: false, requiresShipping: true, code: "", settingLanguage: "vi", moneyFormat: "{{amount_no_decimals_with_comma_separator}}₫", discountLabel: "Miễn phí vận chuyển", districtPolicy: "optional" })}' class="container checkout">
+        <div class="header">
+            <div class="wrap">
+                <div class="shop logo  logo--left " style="padding-left:10%">
+
+                    <h1 class="shop__name">
+                        <a href="/">
+                            VSMobile Shop
+                        </a>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            @using (Html.BeginForm())
+            { 
+                @Html.ValidationSummary(true)
+            <div class="wrap clearfix">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 order-info" define="{order_expand: false}">
+                        @foreach (var item in Model)
+                        {
+                            <div class="order-summary order-summary--custom-background-color ">
+                                <div class="order-summary-header summary-header--thin summary-header--border">
+                                    <h2>
+                                        <label class="control-label">Đơn hàng</label>
+                                    </h2>
+                                    <a class="underline-none expandable expandable--pull-right mobile" bind-event-click="toggle(this, '.order-items')" bind-class="{open: order_expand}" href="javascript:void(0)">
+                                        Xem chi tiết
+                                    </a>
+                                </div>
+                                <div class="order-items mobile--is-collapsed" bind-class="{'mobile--is-collapsed': !order_expand}">
+                                    <div class="summary-body summary-section summary-product">
+                                        <div class="summary-product-list">
+                                            <ul class="product-list">
+
+                                                <li class="product product-has-image clearfix">
+                                                    <div class="product-thumbnail pull-left">
+                                                        <div class="product-thumbnail__wrapper">
+
+                                                            <img src="~/Demo/Hinhanh/Products/@item.sAnhbia" width="50" />
+
+                                                        </div>
+                                                        <span class="product-thumbnail__quantity" aria-hidden="true">@item.iSoluong</span>
+                                                    </div>
+                                                    <div class="product-info pull-left">
+                                                        <span class="product-info-name">
+                                                            <strong>@item.sTendt</strong>
+                                                        </span>
+                                                    </div>
+                                                    <strong class="product-price pull-right">
+                                                        @String.Format("{0:0,0}", item.dDongia) đ
+                                                    </strong>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-section border-top-none--mobile">
+                                    <div class="total-line total-line-total clearfix">
+                                        <span class="total-line-name pull-left">
+                                            Tổng cộng:
+                                        </span>
+                                        <span class="total-line-price pull-right">
+                                            @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ
+                                        </span>
+                                    </div>
+                                </div>
+                           
+                                    <div class="form-group clearfix hidden-sm hidden-xs">
+                                        <input class="btn btn-primary col-md-12 mt10 btn-checkout" type="submit" bind-event-click="paymentCheckout()" value="ĐẶT HÀNG" />
+                                    </div>
+                           
+                            </div>
+                        }
+                       
+                        <div class="form-group has-error">
+                            <div class="help-block ">
+                                <ul class="list-unstyled"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 customer-info">
+                  
+
+
+                        @*<div class="form-group" bind-class="{'has-error' : invalidEmail}">
+                                <input data-error="Vui lòng nhập email đúng định dạng" required name="Email" value="" type="email" class="form-control" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.\+]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" />
+                                <div class="help-block with-errors">
+                                </div>
+                            </div>*@
+                        @{
+                Customer kh = (Customer)Session["Taikhoan"];
+                        }
+                        <div class="billing" style="padding-left:20%">
+                            <div define="{billing_address: {},billing_expand:true}" class="form-group m0">
+                                <h2>
+                                    <label class="control-label">Thông tin mua hàng</label>
+                                </h2>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="/Giohang/GioHang">Quay về giỏ hàng</a>
+                                <span style="padding: 0 5px;">/</span>
+                                <a href="/DangkyDangnhap/Dangnhap">Đăng nhập </a>
+                            </div>
+
+                            <hr class="divider">
+                            <div class="form-group">
+                                <a class="underline-none" bind-event-click="billing_expand = !billing_expand" bind-class="{expandable: otherAddress, open: billing_expand}">
+                                    <h4>Thông tin khách hàng</h4>
+                                    <br/>
+                                    <div class="list-group">
+                                        
+                                        <a href="#" class="list-group-item">@Html.Label(kh.Name)</a>
+                                        <a href="#" class="list-group-item">@Html.Label(kh.Phone)</a>
+                                        <a href="#" class="list-group-item">@Html.Label(kh.Address)</a>
+                                        <a href="#" class="list-group-item">@DateTime.Now</a>
+                                    </div>
+                                   
+                                  
+                                   
+                                </a>
+                            </div>                      
+                                            
+                        </div>
+
+                      
+
+                    </div>
+                  
+                    <div class="form-group payment-method-list">
+                        <h2>
+                            <label class="control-label">Thanh toán</label>
+                        </h2>
+
+                        <div class="radio">
+                            <label class="radio-wrapper">                       
+                                <div class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></div>
+                                <span style="color:blue">Thanh toán khi giao hàng (COD)</span>
+                            </label>
+
+                            <div bind-class="{'slidedown-visible' : payment_method_id == 39767}" class="payment-method-description slidedown-hidden">
+                                <p>cod</p>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            }
+        </div>
+
+        <div class="modal fade" id="refund-policy" data-width="" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <h4 class="modal-title">Chính sách hoàn trả</h4>
+                    </div>
+                    <div class="modal-body">
+                        <pre></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="privacy-policy" data-width="" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <h4 class="modal-title">Chính sách bảo mật</h4>
+                    </div>
+                    <div class="modal-body">
+                        <pre></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="terms-of-service" data-width="" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <h4 class="modal-title">Điều khoản sử dụng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <pre></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade moca-modal" id="moca-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div>
+                        <iframe style="border: 0px; width: 100%; height: 100%;" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="moca-error-modal" data-width="" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <div>
+                            <p>Giao dịch của bạn chưa đủ hạn mức thanh toán</p>
+                            <p>Hạn mức tối thiểu để thanh toán được là 1đ</p>
+                            <p>Vui lòng chọn hình thức thanh toán khác</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

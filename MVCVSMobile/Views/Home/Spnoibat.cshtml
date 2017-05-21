@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MVCVSMobile.Models.Product>
+@foreach (var item in Model)
+{
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item_loop">
+        <!-- Item -->
+
+        <div class="item">
+
+            <div class="col-item">
+                <div class="sale-label sale-top-right">Hot</div>
+                <div class="product-image-area">
+                    <a class="product-image" title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new { id=@item.ID})">
+                        <img src="~/Demo/Hinhanh/Products/@item.Image" alt="@item.Name" />
+                    </a>
+                </div>
+                <div class="info">
+                    <div class="info-inner">
+                        <div class="item-title"><a title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new  {id=@item.ID })"><h3>@item.Name</h3></a></div>
+                        <!--item-title-->
+                        <div class="item-content">
+                            <div class="price-box">
+
+                                <p class="special-price"> <span class="price"> @string.Format("{0:0,0}", item.Price)₫ </span> </p>
+
+
+                            </div>
+                        </div>
+                        <!--item-content-->
+                    </div>
+                    <!--info-inner-->
+                    <div class="actions">
+                        <br />
+                        @if (@item.Status == true)
+                        {
+                            <a title="Mua hàng" class="button btn-cart" href="@Url.Action("Themgiohang", "Giohang", new {@iMadt =@item.ID,@strURL=Request.Url.ToString()})"><span>Mua hàng</span></a>
+
+                        }
+                        else
+                        {
+                            <a title="Mua hàng" class="button btn-cart" href="#"><span>Mua hàng</span></a>
+                        }
+                       @*<button type="button" title="Mua hàng" class="button btn-cart" onclick="addtocart('@item.ID')"><span>Mua hàng</span></button></div>*@ 
+                    <!--actions-->
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+        <!-- End Item -->
+</div>
+}
+

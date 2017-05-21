@@ -1,0 +1,49 @@
+﻿@using MVCVSMobile.Models;
+ @{   ViewBag.Title = "Doimatkhau";
+    Layout = "~/Views/Shared/Layout.cshtml";
+    Customer Taikhoan = (Customer)Session["Taikhoan"];
+}
+
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title">
+                <h2>Đổi mật khẩu</h2>
+            </div>
+            <fieldset class="col2-set">
+                <div class="col-1 registered-users">
+                    <h4 style="color:red; text-align:center">@ViewBag.Thongbao</h4>
+                    <strong>Khách hàng @Taikhoan.Name</strong>
+                    <div class="content">
+                        <form accept-charset='UTF-8' action='' id='customer_login' method='post'>
+                            <input name='FormType' type='hidden' value='customer_login' />
+                            <input name='utf8' type='hidden' value='true' />
+                            @Html.ValidationSummary(true)
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Mật khẩu cũ<span class="required">*@ViewData["Loi1"]</span></label>
+                                    <br>
+                                    <input type="text" title="Mật khẩu cũ" class="input-text required-entry" id="" value="" name="matkhaucu">
+                                </li>
+                                <li>
+                                    <label for="pass">Mật khẩu mới <span class="required">*@ViewData["Loi2"]</span></label>
+                                    <br>
+                                    <input type="password" title="Mật khẩu mới" id="pass" class="input-text required-entry validate-password" name="Matkhaumoi">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button id="send2" type="submit" class="button login"><span>Cập nhật</span></button>       
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+

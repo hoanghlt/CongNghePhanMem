@@ -1,0 +1,97 @@
+﻿@using MVCVSMobile.Models;
+@using PagedList.Mvc;
+
+@model PagedList.PagedList<MVCVSMobile.Models.Product>
+
+@helper Truncate(string input, int length)
+{
+    if(input.Length<length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0,length)<text>....</text>
+    }
+}
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh mục sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm sản phẩm", "Themsanpham")
+</p>
+
+<table class="table" border="1">
+    <tr>
+        <th style="width:200px">Tên SP</th>
+        <th style="width:200px">Hãng sản xuất</th>
+        <th style="width:150px">Hình ảnh</th>
+        <th style="width:200px">Giá</th>
+        <th style="width:200px">Giá khuyến mãi</th>
+        <th style="width:100px">Số lượng</th>
+        <th style="width:350px">Mô tả</th>
+        <th style="width:300px">Chi tiết</th>
+        <th style="width:150px">Kích thước</th>
+        <th style="width:200px">Ngày tạo</th>
+        <th style="width:100px">Trạng thái</th>
+        <th style="width:200px">#</th>
+    </tr>
+   
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCategory.Name)
+        </td>
+        <td>
+           <img src="@Url.Content("~/Demo/Hinhanh/Products/"+ item.Image)" width="100"/>
+        </td>
+        <td>    
+            @String.Format("{0:0,0}", item.Price) VNĐ
+        </td>
+        <td>
+            @String.Format("{0:0,0}", item.PromotionPrice) VNĐ
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>        
+        <td>
+            @Truncate(item.Description,100)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @String.Format("{0:dd/MM/yyyy}", item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>        
+             
+        <td>
+            @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Sửa", "Edit", new { id = item.ID }) |            
+            @Html.ActionLink("Xóa", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+</table>
+Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Product", new { page = page }))
+</div>
+<style>
+    .MenuTrang li{
+        display:inline;
+    }
+</style>

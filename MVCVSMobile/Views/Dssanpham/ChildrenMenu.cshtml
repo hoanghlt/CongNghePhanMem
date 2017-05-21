@@ -1,0 +1,7 @@
+﻿@model IEnumerable<MVCVSMobile.Models.ProductCategory>
+@foreach(var item in Model)
+{
+    <li class="level1- level1 ">
+        <span class="magicat-cat"><a href="@Url.Action("Sptheomenu", "Dssanpham", new { id=item.ID})"><span>@item.Name</span></a></span>
+    </li>
+}

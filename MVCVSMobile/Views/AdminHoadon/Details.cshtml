@@ -1,0 +1,74 @@
+﻿@model MVCVSMobile.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên khách hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerAddress)
+        </dd>
+
+        <dt>
+           Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+
+        <dt>
+           Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerMobile)
+        </dd>
+
+        <dt>
+            Tin nhắn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerMessage)
+        </dd>
+
+        <dt>
+            Ngày tạo:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.CreatedDate)
+        </dd>
+
+        <dt>
+            Tình trạng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Quay về", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿@using MVCVSMobile.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<MVCVSMobile.Models.UserGroup>
+@{
+    ViewBag.Title = "UserGroup";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh mục nhóm người dùng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Themnhom")
+</p>
+<table class="table" border="1" style="text-align:justify">
+    <tr>
+        <th style="width:150px">Mã nhóm</th>
+        <th style="width:150px">Tên nhóm</th>
+        <th style="width:250px">Tình trạng</th>        
+        <th style="width:250px">#</th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Suanhom", new { id=item.ID }) |
+            @Html.ActionLink("Chi tiết", "Chitietnhom", new { id=item.ID }) |
+            @Html.ActionLink("Xóa", "Xoanhom", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("UserGroup", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

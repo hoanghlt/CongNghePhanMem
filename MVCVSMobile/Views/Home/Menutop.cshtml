@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MVCVSMobile.Models.ProductCategory>
+
+    <a href="/Dssanpham/Allsp"><span>Sản phẩm</span> </a>  
+    <ul class="level1">
+    @foreach (var item in Model)
+    {
+            <li class="level1">
+            <a> <span>@item.Name</span></a>               
+             @Html.Action("ChildrenMenu", "Home", new { ParentID=@item.DisplayOrder})         
+            </li>
+     }
+        <li class="level1">
+            <a href="/Dssanpham/Allsp"> <span>TẤT CẢ</span></a>
+           
+        </li>
+    </ul>

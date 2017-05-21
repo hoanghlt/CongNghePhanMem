@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Dangky";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title">
+                <h2>Đăng ký tài khoản thành viên.</h2>
+            </div>
+            <fieldset class="col2-set">
+                <legend>Đăng ký tài khoản thành viên.</legend>
+                <div class="col-1 registered-users col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <strong>Thông tin tài khoản</strong>
+                    <div class="content">
+                        <p>Hãy điền đầy đủ các thông tin dưới để tạo một tài khoản mới.</p>
+                        <form accept-charset='UTF-8' action='' id='customer_register' method='post'>
+                            <input name='FormType' type='hidden' value='customer_register' />
+                            <input name='utf8' type='hidden' value='true' />
+                            @Html.ValidationSummary(true)
+                            <ul class="form-list">
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="first_name">Họ Tên <span class="required">*@ViewData["Loi1"]</span></label>
+                                    <br>
+                                    <input type="text" title="Họ Tên" class="input-text required-entry" id="firstName" value="" name="HotenKH">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="last_name">Điện thoại <span class="required">*@ViewData["Loi5"]</span></label>
+                                    <br>
+                                    <input type="number" title="Điện thoại" class="input-text required-entry" id="lastName" value="" name="Dienthoai">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="first_name">Tên đăng nhập <span class="required">*@ViewData["Loi2"]</span></label>
+                                    <br>
+                                    <input type="text" title="Tài khoản đăng nhập" class="input-text required-entry" id="firstName" value="" name="TenDN">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="email">Email <span class="required">*@ViewData["Loi6"]</span></label>
+                                    <br>
+                                    <input type="text" title="Địa chỉ email" class="input-text required-entry" id="email" value="" name="Email">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="pass">Mật khẩu <span class="required">*@ViewData["Loi3"]</span></label>
+                                    <br>
+                                    <input type="password" title="Mật khẩu" id="pass" class="input-text required-entry validate-password" name="Matkhau">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="email">Địa chỉ <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="Địa chỉ" class="input-text required-entry" id="email" value="" name="Diachi">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="pass">Nhập lại mật khẩu <span class="required">*@ViewData["Loi4"]</span></label>
+                                    <br>
+                                    <input type="password" title="Mật khẩu" id="pass" class="input-text required-entry validate-password" name="Matkhaunhaplai">
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="g-recaptcha" data-sitekey="6LeLjgkUAAAAAO9HQ3X29VdlsnU4pLQU_HRj-Q96"></div>
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button id="send2" type="submit" class="button login"><span>Đăng ký</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</section>
+

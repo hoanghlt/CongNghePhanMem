@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVCVSMobile.Models.Feedback>
+
+@{
+    ViewBag.Title = "PhanhoiIndex";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Phản hồi khách hàng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Themph")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên khách hàng:
+        </th>
+        <th>
+            Email:
+        </th>
+        <th>
+            Chủ đề:
+        </th>
+        <th>
+            Nội dung:
+        </th>
+        <th>
+            Ngày gửi:
+        </th>
+        <th>
+            Tình trạng:
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @String.Format("{0:dd/MM/yyyy}", item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Editph", new { id=item.ID }) |
+            @Html.ActionLink("Chi tiết", "Detailph", new { id=item.ID }) |
+            @Html.ActionLink("Xóa", "Deleteph", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

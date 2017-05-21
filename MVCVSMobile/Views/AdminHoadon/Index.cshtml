@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVCVSMobile.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh mục hóa đơn</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Them")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên khách hàng:
+        </th>
+        <th>
+            Địa chỉ:
+        </th>
+        <th>
+            Email:
+        </th>
+        <th>
+            Số điện thoại:
+        </th>
+        <th>
+            Ý kiến:
+        </th>
+        <th>
+            Ngày đặt:
+        </th>
+        <th>
+            Tình trạng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerMobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerMessage)
+        </td>
+        <td>
+            @String.Format("{0:dd/MM/yyyy}", item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

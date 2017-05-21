@@ -1,0 +1,62 @@
+﻿@using MVCVSMobile.Models;
+@model List<Giohang>
+    <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+        <a href="@Url.Action("Giohang","Giohang")">
+            <div class="cart-box"><span id="cart-total"><strong>@ViewBag.Tongsoluong</strong>sản phẩm</span></div>
+        </a>
+    </div>
+    <div>
+    <div class="top-cart-content arrow_box">
+        @if(Model.Count>0)
+        { 
+              <div class="block-subtitle">Các sản phẩm đã được mua</div>
+                 <ul id="cart-sidebar" class="mini-products-list">
+                @foreach (var item in Model)
+                    {
+                    <li class='item even'>
+                            @if (item != null)
+                            {
+                          
+                                      <a class='product-image' href='@Url.Action("Chitiet", "Chitietsanpham", new { id=item.iMadt})'><img alt='' src='~/Demo/Hinhanh/Products/@item.sAnhbia' width='80'></a>
+                         <div class='detail-item'>
+
+                            <div class='product-details'>                                                                            
+                                <a href="/Giohang/Giohang" class='glyphicon glyphicon-pencil' title='Sửa sản phẩm'>&nbsp;</a>
+                                <a href="/Giohang/Xoagiohangpartial?isp=@item.iMadt" class='glyphicon glyphicon-remove' aria-hidden="true" title='Xóa sản phẩm'>
+                                    &nbsp;
+                                </a>    
+                                <p class='product-name'> <a href='@Url.Action("Chitiet", "Chitietsanpham", new { id=item.iMadt})' title='@item.sTendt'>@item.sTendt</a></p>
+
+                            </div>
+                            <div class='product-details-bottom'> 
+                                <span class='price'>@item.dDongia.ToString("N0")₫</span><span class='title-desc'>Số lượng:</span> <strong>@item.iSoluong</strong>
+                            </div>
+                        </div>
+                            }
+
+                            else
+                            {
+                            <a class='product-image' href='" + cart.items[i].url + "' title='" + cart.items[i].name + "'><img alt='" + cart.items[i].name + "' src='http://bizweb.dktcdn.net/thumb/large/assets/themes_support/noimage.gif' width='80'></a>
+                            }
+
+                       
+
+                        </li>
+
+                    }
+
+                </ul>
+                <div class="top-subtotal">Tổng tiền: <span class="price"> @ViewBag.Tongtien₫</span></div>
+                <div class="actions">
+                    <a class="btn-checkout" href="/Giohang/DatHang"><i class="fa fa-check" aria-hidden="true"></i><span>&nbsp;Thanh toán</span></a>
+                    <a class="view-cart" href="/Giohang/Giohang"><i class="fa fa-cart-plus" aria-hidden="true"></i><span>&nbsp;Giỏ hàng</span></a>
+               </div>
+            }
+      else
+        {
+                 <div class="block-subtitle">Không có sản phẩm trong giỏ hàng</div>
+        }
+    </div>
+      
+</div>
+	

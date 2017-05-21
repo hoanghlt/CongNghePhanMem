@@ -1,0 +1,120 @@
+﻿@model MVCVSMobile.Models.User
+
+@{
+    ViewBag.Title = "DeleteUser";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Xóa Admin</h2>
+
+<h3>Bạn muốn xóa ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên đăng nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            Mật khẩu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            Tên Admin:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Số điện thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            Ngày tạo:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.CreatedDate)
+        </dd>
+
+        <dt>
+            Người tạo:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            Ngày sửa:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.UpdatedDate)
+        </dd>
+
+        <dt>
+            Người sửa:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+
+        <dt>
+            Trạng thái:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            Nhóm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserGroup.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

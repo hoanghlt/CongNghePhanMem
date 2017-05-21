@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Lienket";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<link href="~/Demo/Content/blogmate.css" rel="stylesheet" />
+<div class="main-container col2-right-layout">
+    <div class="main container">
+        <div class="row">
+            <div class="col-main col-sm-9">
+                <div class="page-title">
+                    <h1>@ViewBag.Description</h1>
+                    <div class="blog-wrapper" id="main">
+                        <div class="site-content" id="primary">
+                            <div role="main" id="content">
+
+                                @foreach (var item in ViewBag.data)
+                                {
+
+                                    <article class="blog_entry clearfix wow bounceInUp animated">
+                                        <header class="blog_entry-header clearfix">
+                                            <div class="blog_entry-header-inner">
+                                                <h3 class="blog_entry-title"> <a rel="bookmark" href="@item.link"><h3>@Html.Raw(@item.title)</h3></a></h3>
+                                            </div>
+                                            <!--blog_entry-header-inner-->
+                                        </header>
+                                        <div class="entry-content">
+                                      
+                                            <div class="entry-content">
+                                                @Html.Raw(@item.description)                                                                            
+                                            </div>
+                                            <p> <a class="blog-btn" href="@item.link">Đọc thêm</a> </p>
+                                        </div>
+                                        <footer class="entry-meta">
+                                            Được đăng vào
+                                            <time class="entry-date">@String.Format("{0:dd/MM/yyy}",@item.pubDate)</time>
+                                        </footer>
+                                    </article>
+
+
+                                }
+
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+            <!--Menu right-->
+            @Html.Action("Menutintuc", "Pages")
+    </div>
+</div>
+</div>

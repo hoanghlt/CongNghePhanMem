@@ -1,0 +1,107 @@
+﻿@using MVCVSMobile.Models;
+@{
+    ViewBag.Title = "Tài khoản khách hàng";
+    Layout = "~/Views/Shared/Layout.cshtml";
+    Customer taikhoan = (Customer)Session["Taikhoan"];
+}
+
+<section class="main-container col1-layout">
+    <div class="main container">
+            @if (taikhoan == null)
+            {
+              <div class="account-login">
+         
+            <div class="page-title">
+                <h2>Đăng nhập hoặc tạo tài khoản.</h2>
+            </div>
+            <fieldset class="col2-set">
+                <legend>Đăng nhập hoặc tạo tài khoản.</legend>
+                <div class="col-lg-6 col-xs-12 registered-users">
+                    <strong>Khách hàng đã đăng ký</strong>
+                    <div class="content">
+                        <p style="color:red">@ViewBag.Thongbao</p>
+                        <form accept-charset='UTF-8' action='' id='customer_login' method='post'>
+                            <input name='FormType' type='hidden' value='customer_login' />
+                            <input name='utf8' type='hidden' value='true' />
+                            @Html.ValidationSummary(true)
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Tên đăng nhập <span class="required">*@ViewData["Loi1"]</span></label>
+                                    <br>
+                                    <input type="text" title="Tên đăng nhập" class="input-text required-entry" id="" value="" name="Tendn">
+                                </li>
+                                <li>
+                                    <label for="pass">Mật khẩu <span class="required">*@ViewData["Loi2"]</span></label>
+                                    <br>
+                                    <input type="password" title="Mật khẩu" id="pass" class="input-text required-entry validate-password" name="Matkhau">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button id="send2" type="submit" class="button login"><span>Đăng nhập</span></button>
+                                <span>Chưa có tài khoản ? <a class="forgot-word" href="/DangkyDangnhap/Dangky"> Đăng ký</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 new-users">
+                    <strong>Lấy lại mật khẩu</strong>
+                    <div class="content">
+                        <p>Bạn đã có một tài khoản nhưng bạn quên mật khẩu nên không thể đăng nhập vào hệ thống. Hãy điền Email vào ô bên dưới và nhận hỗ trợ lấy lại mật khẩu qua Email.</p>
+                        <form accept-charset='UTF-8' action='/account/recover' id='recover_customer_password' method='post'>
+                            <input name='FormType' type='hidden' value='recover_customer_password' />
+                            <input name='utf8' type='hidden' value='true' />
+
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="Địa chỉ email" class="input-text required-entry" id="email" value="" name="Email">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button id="send2" type="submit" class="button login"><span>Lấy lại mật khẩu</span></button>
+                            </div>
+                            <input name='returnUrl' type='hidden' value='/account' />
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+            }
+            else
+            {
+                <div class="account-login" style="text-align:center">
+                    <div class="page-title">
+                        <h2>Thông tin khách hàng đã đăng ký</h2>
+                    </div>
+                    <fieldset class="col2-set">
+                        <legend>Thông tin khách hàng đã đăng ký</legend>
+                        <div class="">
+                            <br />
+                            <div class="content">
+                                <p>Tên tài khoản :<strong>@taikhoan.Name</strong></p>
+                                <p>Tên đăng nhập :<strong>@taikhoan.UserName</strong></p>
+                                <p>Địa chỉ :<strong>@taikhoan.Address</strong></p>
+                                <p>Số điện thoại :<strong>@taikhoan.Phone</strong></p>
+                                <p>Email :<strong>@taikhoan.Email</strong></p>
+                                <p>Ngày tạo :<strong>@taikhoan.CreatedDate</strong></p>
+                                <span class="label label-default">&nbsp;&nbsp;</span>
+                                <span class="label label-primary">&nbsp;&nbsp;</span>
+                                <span class="label label-success">&nbsp;&nbsp;</span>
+                                <span class="label label-info">&nbsp;&nbsp;</span>
+                                <span class="label label-warning">&nbsp;&nbsp;</span>
+                                <span class="label label-danger">&nbsp;&nbsp;</span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            }
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+

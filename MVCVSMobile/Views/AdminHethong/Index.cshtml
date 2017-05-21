@@ -1,0 +1,75 @@
+﻿@using MVCVSMobile.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<MVCVSMobile.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh mục User</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Themuser")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th style="width:150px">User Name</th>
+        <th style="width:150px">Password</th>
+        <th style="width:250px">Tên Admin</th>
+        <th style="width:200px">Địa chỉ</th>
+        <th style="width:200px">Email</th>
+        <th style="width:100px">Số điện thoại</th>
+        <th style="width:200px">Ngày tạo</th>
+        <th style="width:100px">Trạng thái</th>
+        <th style="width:100px">Nhóm</th>
+        <th style="width:250px">#</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @String.Format("{0:dd/MM/yyyy}", item.CreatedDate)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserGroup.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "EditUser", new { id = item.ID }) |
+            @Html.ActionLink("Chi tiết", "DetailsUser", new { id=item.ID }) |
+            @Html.ActionLink("Xóa", "DeleteUser", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

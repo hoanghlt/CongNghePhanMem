@@ -1,0 +1,142 @@
+﻿@using MVCVSMobile.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Product>
+@{
+    ViewBag.Title = "Sptheomenu";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="home"> <a href="/" title="Trở về trang chủ">Trang chủ</a><span>&mdash;›</span></li>
+                <li class="category13">Điện thoại</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End breadcrumbs -->
+<!-- Two columns content -->
+<section class="main-container col2-left-layout">
+
+    <div class="main container">
+        <div class="row">
+            <div class="col-main col-sm-9 col-sm-push-3 wow bounceInUp animated">
+                <div class="category-title">
+                    <h1>Laptop</h1>
+                </div>
+
+                <div class="category-products">
+                    <div class="toolbar">
+                        <div id="sort-by">
+                            <label class="left">Sắp xếp: </label>
+                            <ul>
+                                <li>
+                                    <a href="#">Chọn<span class="right-arrow"></span></a>
+                                    <ul>
+                                        <li><a href="?sortby=manual">Mặc định</a></li>
+                                        <li><a href="?sortby=alpha-asc">A &rarr; Z</a></li>
+                                        <li><a href="?sortby=alpha-desc">Z &rarr; A</a></li>
+                                        <li><a href="?sortby=price-asc">Giá tăng dần</a></li>
+                                        <li><a href="?sortby=price-desc">Giá giảm dần</a></li>
+                                        <li><a href="?sortby=created-desc">Hàng mới nhất</a></li>
+                                        <li><a href="?sortby=created-asc">Hàng cũ nhất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pager">
+                            <label style="padding-top:4%">Trang:</label>
+                            <div class="pages">
+                             
+                                @Html.PagedListPager(Model, page => Url.Action("Sptheomenu", new { page = page }))  
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="products-grid">
+                        @foreach(var item in Model)
+                        { 
+
+                        <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-12">
+
+                            <div class="col-item">                     
+                                @if (item.PromotionFlag == true)
+                                {
+                                    <div class="sale-label sale-top-right">Sale</div>
+                                }
+                                @if (item.Status == false)
+                                {
+                                    <div class="sale-label sale-top-right" style="width:20%; background:#0781d9">Hết hàng</div>
+
+                                }
+                                <div class="product-image-area">
+                                    <a class="product-image" title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new  {id=@item.ID })"><img src="~/Demo/Hinhanh/Products/@item.Image" class="img-responsive" alt="a" title="@item.Name" /> </a>
+                                </div>
+                                <div class="info">
+                                    <div class="info-inner">
+                                        <div class="item-title"> <a title="@item.Name" href="@Url.Action("Chitiet", "Chitietsanpham", new { id = @item.ID })"><h3>@item.Name</h3></a></div>
+                                        <!--item-title-->
+                                        <div class="item-content">
+                                            <div class="price-box">
+                                                @if (item.PromotionPrice > 0 && item.Status == true)
+                                                {
+                                                    <p class="special-price"><span class="price"> @String.Format("{0:0,0}", @item.PromotionPrice)</span> </p>
+                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price">@String.Format("{0:0,0}", @item.Price)</span> </p>
+                                                }
+                                                else
+                                                {
+                                                    <p class="special-price"><span class="price"> @String.Format("{0:0,0}", @item.Price)</span> </p>
+                                                }
+                                                
+                                            </div>
+                                        </div>
+                                        <!--item-content-->
+                                    </div>
+                                    <br/>
+                                    <!--info-inner-->
+                                    <div class="actions">
+
+                                        @*<button type="button" title="Mua hàng" class="button btn-cart" onclick="Bizweb.addItem(1271121, 1, cartItem)"><span>Mua hàng</span></button>*@
+                                      @if (@item.Status == true)
+                                        {
+                                            <a title="Mua hàng" class="button btn-cart" href="@Url.Action("Themgiohang", "Giohang", new {@iMadt =@item.ID,@strURL=Request.Url.ToString()})"><span>Mua hàng</span></a>
+
+                                        }
+                                        else
+                                        {
+                                            <a title="Mua hàng" class="button btn-cart" href="#"><span>Mua hàng</span></a>
+                                        }
+
+
+                                    </div>
+                                    <!--actions-->
+
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </div>
+                        </li>
+                        }
+
+                    </ul>
+                </div>
+
+            </div>
+            <!--Menuleft-->
+            <aside class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9 wow bounceInUp animated">
+                <div class="side-nav-categories">
+                    <div class="block-title"><h2>Danh mục sản phẩm</h2></div>
+                    <div class="box-content box-category">
+                        @Html.Action("Menuleft", "Dssanpham")
+                    </div>
+                </div>
+                <div class="block block-banner">
+                    <a href="#"><img src="https://bizweb.dktcdn.net/100/037/441/themes/187698/assets/block-banner.png?1477883023849" alt="Công nghệ số Accent"></a>
+                    <div id="bw-statistics"></div>
+                </div>
+            </aside>
+            <!--End Menuleft-->          
+        </div>
+    </div>
+</section>
+

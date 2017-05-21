@@ -1,0 +1,296 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+   <!-- header service -->
+<div class="header-service">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="icon-truck">&nbsp;</div>
+                    <span>Miễn phí vận chuyển</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="icon-support">&nbsp;</div>
+                    <span>Hỗ trợ 24/7</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="icon-money">&nbsp;</div>
+                    <span>Hoàn tiền trong 15 ngày</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="icon-dis">&nbsp;</div>
+                    <span>Giảm giá theo đơn hàng</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end header service -->
+<!-- Slider -->
+<div id="magik-slideshow" class="magik-slideshow">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 col-md-8 wow bounceInUp animated">
+                <div id='owl_slider_index'>
+                    <div class="item">
+                        <a href=""><img src="http://didongthongminh.vn/images/video/large/thumbnail-chuan-recovered_1476439426.jpg" alt="Công nghệ số Accent" /></a>
+                    </div>
+                      <div class="item">
+                        <a href="#"><img src="http://didongthongminh.vn/images/slideshow/2016/10/06/slideshow_large/mini3_1475751923.png" alt="Công nghệ số Accent" /></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="http://didongthongminh.vn/images/slideshow/2016/10/17/slideshow_large/slide-01_1476656182.jpg" alt="Công nghệ số Accent" /></a>
+                    </div>
+                  
+                   
+                    <div class="item">
+                        <a href=""><img src="http://didongthongminh.vn/images/video/large/thumnail-iphone-khan-hang_1476353155.jpg" alt="Công nghệ số Accent" /></a>
+                    </div>
+                </div>
+            </div>
+            <aside class="col-xs-12 col-sm-12 col-md-4 wow bounceInUp animated">
+                <div class="RHS-banner">
+                    <div class="add">
+                        <a href=""><img alt="banner-img" src="//bizweb.dktcdn.net/100/037/441/themes/187698/assets/rhs-men-banner.png?1477883023849" alt="Công nghệ số Accent"></a>
+                    </div>
+                </div>
+                <div class="RHS-banner">
+                    <div class="add">
+                        <a href=""><img alt="banner-img" src="//bizweb.dktcdn.net/100/037/441/themes/187698/assets/rhs-women-banner.png?1477883023849" alt="Công nghệ số Accent"></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+<!-- end Slider -->
+<!-- main container -->
+<section class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 hidden-sm hidden-xs">
+            <div class="aside-container">
+                <div class="online_support block">
+                    <div class="new_title">
+                        <h2>Hỗ trợ trực tuyến</h2>
+                    </div>
+                    <div class="block-content">
+                        <div class="sp_1">
+                            <p style="color:#0094ff">Tư vấn bán hàng 1</p>
+                            <p style=" color:#b4b4b4">Mrs. Sang: <span>(04) 3786 8904</span></p>
+                        </div>
+                        <div class="sp_2">
+                            <p style="color:#0094ff">Tư vấn bán hàng 2</p>
+                            <p style=" color:#b4b4b4">Mr. Vinh: <span>(04) 3786 8904</span></p>
+                        </div>
+                        <div class="sp_mail">
+                            <p style="color:#0094ff">Email liên hệ</p>
+                            <p style=" color:#b4b4b4">sangthanh052@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SP Bán chạy -->
+                <div class="sale_product block">
+                    <div class="new_title">
+                        <a href="san-pham-noi-bat"><h2>Sản phẩm bán chạy</h2></a>
+                        <div class="sale-navigator">
+                            <a class="btn prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <a class="btn next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div id="owl-sale-product" class="owl-carousel owl-theme">
+                            @Html.Action("Spbanchay1","Home")
+                            @Html.Action("Spbanchay2", "Home")
+                        </div>
+                    </div>
+                </div>               
+                <!-- END SP Bán chạy -->
+                <div class="blog_news block">
+                    <div class="new_title">
+                        <a href="tin-tuc"><h2>Tin tức</h2></a>
+                        <div class="blog-navigator">
+                            <a class="btn prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <a class="btn next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div id="owl-news-blog" class="owl-carousel owl-theme">
+
+
+                            <div class="item blog-post">
+                                <div class="blog-image">
+
+                                    <a href="/Pages/Tintuc"><img src="//bizweb.dktcdn.net/thumb/medium/100/037/441/articles/lumiatablet1.jpg?v=1449042941343" alt="Tin tức - Blog" /></a>
+
+                                </div>
+                                <div>
+                                    <h3>
+                                        <a class="article_title" href="/Pages/Tintuc">Tablet Nokia Lumia vừa mới được lộ diện</a>
+                                    </h3>
+                                    <p>
+                                        <span><i class="fa fa-user" aria-hidden="true"></i> Bizweb Theme</span>
+                                        <span><i class="fa fa-calendar" aria-hidden="true"></i> 01/ 12/ 2015</span>
+                                    </p>
+                                    <p class="post_content"> Surface hiện vẫn đang là dòng máy tính chủ lực của Microsoft, với hai sản phẩm mới nhất là Surface Pro 4 và Surface Book. Tuy nhiên theo thông tin rò rỉ từ trang twitter nổi tiếng thì...<a href=/tablet-nokia-lumia-chua-bao-gio-ra-mat-vua-lo-dien-mot-lan-nua> [Xem thêm...] </a></p>
+                                </div>
+                            </div>
+
+                            <div class="item blog-post">
+                                <div class="blog-image">
+
+                                    <a href="/Pages/Tintuc"><img src="//bizweb.dktcdn.net/thumb/medium/100/037/441/articles/maxresdefault.jpg?v=1448966334947" alt="Tin tức - Blog" /></a>
+
+                                </div>
+                                <div>
+                                    <h3>
+                                        <a class="article_title" href="/Pages/Tintuc">Huawei sắp tung smartphone có camera cực độc</a>
+                                    </h3>
+                                    <p>
+                                        <span><i class="fa fa-user" aria-hidden="true"></i> Bizweb Theme</span>
+                                        <span><i class="fa fa-calendar" aria-hidden="true"></i> 01/ 12/ 2015</span>
+                                    </p>
+                                    <p class="post_content"> Sau khi ra mắt chiếc smartphone cực mạnh Mate 8 với chip Kirin 950 thì mới đây, hãng smartphone hàng đầu Trung Quốc Huawei tiếp tục đăng quảng cáo về một smartphone mới với camera rất độc đáo. <a href=/huawei-sap-tung-smartphone-co-camera-doc-dao-khong-kem-gi-oppo-n3> [Xem thêm...] </a></p>
+                                </div>
+                            </div>
+
+                            <div class="item blog-post">
+                                <div class="blog-image">
+
+                                    <a href="/Pages/Tintuc"><img src="//bizweb.dktcdn.net/thumb/medium/100/037/441/articles/832-img1.jpg?v=1448965983470" alt="Tin tức - Blog" /></a>
+
+                                </div>
+                                <div>
+                                    <h3>
+                                        <a class="article_title" href="/Pages/Tintuc">iPhone 6c giá rẻ tiếp tục xuất hiện</a>
+                                    </h3>
+                                    <p>
+                                        <span><i class="fa fa-user" aria-hidden="true"></i> Bizweb Theme</span>
+                                        <span><i class="fa fa-calendar" aria-hidden="true"></i> 01/ 12/ 2015</span>
+                                    </p>
+                                    <p class="post_content"> iPhone 6c một lần nữa rò rỉ các thông tin quan trọng và đặc biệt, nguồn tin còn khẳng định chắc chắn là nó sẽ được ra mắt. Dự kiến đây sẽ là mẫu iPhone giá rẻ nhưng có...<a href=/iphone-6c-gia-re-tiep-tuc-xuat-hien> [Xem thêm...] </a></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistics block">
+                    <div id="bw-statistics"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+            <section class="main-container col1-layout home-content-container">
+                <div class="std">
+                    <div class="slider-items-products">
+                        <div class="new_title center">
+                            <a href="/Dssanpham/Allsp"><h2>Sản phẩm mới</h2></a>
+                            <a href="/Dssanpham/Allsp">Xem tất cả <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="hidden-buttons">
+                            <div class="slider-items slider-width-col4 row">
+                                <br />
+                             @Html.Action("Spmoi","Home")              
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="featured-pro wow animated parallax parallax-2">
+                <div class="std">
+                    <div class="slider-items-products">
+                        <div class="new_title center">
+                            <a href="/Dssanpham/Allsp"><h2>Sản phẩm nổi bật</h2></a>
+                            <a href="/Dssanpham/Allspt">Xem tất cả <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="hidden-buttons">
+                            <div class="slider-items slider-width-col4 row">
+                                <br />
+                       @Html.Action("Spnoibat","Home")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="middle-slider">
+                <div class="row">
+                    <div class="col-sm-6 wow bounceInUp">
+                        <div class="inner-div">
+                            <a href="/Dssanpham/Allsp"><h2 class="category-pro-title"><span>Bộ sưu tập IOS</span></h2></a>
+                            <div class="category-products">
+                                <div class="products small-list">
+                                    @Html.Action("BosuutapIOS","Home")
+                          
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 wow bounceInUp">
+                        <div class="inner-div">
+                            <a href="/Dssanpham/Allsp"><h2 class="category-pro-title"><span>Bộ sưu tập Android</span></h2></a>
+                            <div class="category-products">
+                                <div class="products small-list">
+                       
+                                   @Html.Action("BosuutapAndroid", "Home")
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</section>
+
+<div class="promo-banner-section container wow bounceInUp animated">
+    <div class="container">
+        <div class="row"> <img alt="Công nghệ số Accent" src="~/Demo/Hinhanh/Bannerbutton.png"></div>
+    </div>
+</div>
+
+<section class="recommend container">
+    <div class="recommend-product-slider small-pr-slider wow bounceInUp">
+        <div class="slider-items-products">
+            <div class="new_title center">
+                <a href="/Dssanpham/Allsp"><h2>Sản phẩm giới thiệu</h2></a>
+                <a href="/Dssanpham/Allsp">Xem tất cả <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="hidden-buttons">
+                <div class="slider-items slider-width-col3 row">
+                    <br/>
+                    @Html.Action("Spgioithieu","Home")
+                   
+
+       
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

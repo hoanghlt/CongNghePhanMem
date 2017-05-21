@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="main-container col1-layout">
+<div class="main container">
+    <div class="account-login">
+        <div class="page-title">
+            <h2>Đăng nhập hoặc tạo tài khoản.</h2>
+        </div>
+        <fieldset class="col2-set">
+            <legend>Đăng nhập hoặc tạo tài khoản.</legend>
+            <div class="col-1 registered-users">
+                <h4 style="color:red; text-align:center">@ViewBag.Thongbao</h4>
+                <strong>Khách hàng đã đăng ký</strong>
+                <div class="content">
+                    <form accept-charset='UTF-8' action='' id='customer_login' method='post'>
+                        <input name='FormType' type='hidden' value='customer_login' />
+                        <input name='utf8' type='hidden' value='true' />
+                        @Html.ValidationSummary(true)
+                        <ul class="form-list">
+                            <li>
+                                <label for="email">Tên đăng nhập <span class="required">*@ViewData["Loi1"]</span></label>
+                                <br>
+                                <input type="text" title="Tên đăng nhập" class="input-text required-entry" id="" value="" name="Tendn">
+                            </li>
+                            <li>
+                                <label for="pass">Mật khẩu <span class="required">*@ViewData["Loi2"]</span></label>
+                                <br>
+                                <input type="password" title="Mật khẩu" id="pass" class="input-text required-entry validate-password" name="Matkhau">
+                            </li>
+                        </ul>
+                        <div class="buttons-set">
+                            <button id="send2" type="submit" class="button login"><span>Đăng nhập</span></button>
+                            <span>Chưa có tài khoản ? <a class="forgot-word" href="/DangkyDangnhap/Dangky"> Đăng ký</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+</section>
+
+
+

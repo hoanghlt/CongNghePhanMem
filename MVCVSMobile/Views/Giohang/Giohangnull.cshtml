@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Giohangnull";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<section class="main-container col1-layout">
+        <div class="main container">
+            <div class="col-main">
+                <div class="cart wow bounceInUp animated">
+                    <div class="page-title">
+                        <h2>Giỏ hàng</h2>
+                    </div>
+
+                    <div class="table-responsive">
+                        <form method="post" action="/cart">
+                            <fieldset>
+                                <h5 style="padding:5% 5% 5% 5%;background:#f3dcf3;color:red;font-family:'Microsoft YaHei UI'">Không có sản phẩm nào trong giỏ hàng</h5>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <!-- BEGIN CART COLLATERALS -->
+                    <div class="cart-collaterals row">
+                        <div class="totals col-sm-offset-8 col-sm-4">
+                            <h3>Tổng tiền hóa đơn</h3>
+                            <div class="inner">
+                                <table class="table shopping-cart-table-total" id="shopping-cart-totals-table">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="1" class="a-left"> Tổng tiền : </td>
+                                            <td class="a-right pull-right"><span class="price">0₫</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="checkout">
+                                    <li>
+                                        <button class="button btn-proceed-checkout" title="Thực hiện thanh toán" onclick=""><span>Thực hiện thanh toán</span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--inner-->
+
+                        </div>
+                    </div>
+
+                    <!--cart-collaterals-->
+
+                </div>
+
+              @*  @Html.Action("Spnenmua","Giohang")*@
+
+            </div>
+        </div>
+</section>
+
+

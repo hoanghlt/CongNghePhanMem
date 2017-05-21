@@ -1,0 +1,40 @@
+﻿@model MVCVSMobile.Models.UserGroup
+
+@{
+    ViewBag.Title = "Xoanhom";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Xóa thông tin</h2>
+
+<h3>Bạn muốn xóa?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên nhóm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Tình trạng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "UserGroup")
+        </div>
+    }
+</div>

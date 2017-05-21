@@ -1,0 +1,67 @@
+﻿@model MVCVSMobile.Models.Feedback
+
+@{
+    ViewBag.Title = "Detailph";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Detailph</h2>
+
+<div>
+    <h4>Feedback</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên khách hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+           Nội dung:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            Ngày gừi:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.CreateDate)
+        </dd>
+
+        <dt>
+            Tình trạng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Editph", new { id = Model.ID }) |
+    @Html.ActionLink("Quay về", "PhanhoiIndex")
+</p>
